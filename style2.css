@@ -1,0 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    background-color:khaki;
+}
+
+h1 {
+    background-color: black;
+    color:cornflowerblue;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 5rem;
+}
+
+/* The circular area behind the image */
+.choice {
+    height: 180px;
+    width: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* Black circle appears BEHIND the image */
+.choice:hover {
+    background-color: black;
+}
+
+/* The actual image */
+.choice img {
+    height: 150px;
+    width: 150px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+/* Slightly enlarge the image when hovering */
+.choice:hover img {
+    transform: scale(1.05);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 7rem;
+    margin-top: 5rem;
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#user-score , #comp-score{
+    font-size: 4rem;
+
+}
+
+.message-container{
+    margin-top: 5rem;
+}
+
+#msg{
+    background-color:cadetblue;
+    color: wheat;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 2rem;
+}
