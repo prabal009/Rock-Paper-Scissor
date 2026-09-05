@@ -63,17 +63,14 @@ If both the player and computer choose the same option, the round is a draw.
 
 Selecting HTML elements and dynamically modifying their content and styles using JavaScript.
 
-
+```javascript
 const msg = document.querySelector("#msg");
 
 msg.innerText = "You Win!";
 msg.style.backgroundColor = "green";
-
-DOM manipulation allows the game interface to change dynamically without refreshing the page.
-
 2. Event Listeners
 
-Handling user interactions by attaching click events to the Rock, Paper, and Scissors choices.
+Handling user interactions by attaching click events to multiple game choices.
 
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
@@ -81,37 +78,22 @@ choices.forEach((choice) => {
         play(userChoice);
     });
 });
-
-This allows the game to respond whenever the player clicks on a choice.
-
 3. Functions and Scope
 
-Creating reusable functions for different parts of the game and understanding parameters, return values, local scope, and global scope.
+Creating reusable functions, passing parameters, returning values, and understanding local and global scope.
 
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
-
     return options[Math.floor(Math.random() * 3)];
 };
 4. Control Flow
 
-Using if, else if, else, and ternary operators to implement the game's decision-making logic.
-
-if (userChoice === compChoice) {
-    drawGame();
-}
-else {
-    // Determine the winner
-}
-
-A ternary operator can also be used for shorter conditional expressions:
+Using conditional statements and ternary operators to implement the game logic.
 
 userWin = compChoice === "paper" ? false : true;
 5. Variables and Data Types
 
-The project uses different JavaScript data types and variable declarations.
-
-Some of the concepts practiced include:
+Working with:
 
 Strings
 Numbers
@@ -119,31 +101,18 @@ Booleans
 let
 const
 Template literals
-
-Example:
-
-let userScore = 0;
-let compScore = 0;
-
-Template literals are used to dynamically create messages:
-
 msg.innerText = `You Win! ${userChoice} beats ${compChoice}`;
 6. CSS Styling and Transitions
 
-CSS was used to create the layout and improve the visual appearance of the game.
+Using CSS to create the game's layout and improve the user experience.
 
-Important concepts practiced include:
+Important concepts included:
 
 Flexbox
 Hover effects
 Border radius
-CSS transitions
+Transitions
 Transformations
-Alignment
-Spacing
-
-Example:
-
 .choice {
     transition: 0.2s;
 }
@@ -154,17 +123,12 @@ Example:
 }
 7. Random Number Generation
 
-The computer's choice is generated using Math.random() and Math.floor().
+Using Math.random() and Math.floor() to generate the computer's move.
 
 const randIdx = Math.floor(Math.random() * 3);
-
-The generated index is then used to select one of the available choices.
-
 8. Game State Management
 
-The game keeps track of the player's score and the computer's score using variables.
+Tracking the player's and computer's scores and updating the interface after each round.
 
 let userScore = 0;
 let compScore = 0;
-
-These values are updated after every round and displayed dynamically on the webpage.
