@@ -1,33 +1,37 @@
+Rock Paper Scissors Game
+A classic hand game brought to life with HTML, CSS, and JavaScript
 
-ROCK PAPER SCISSOR GAME
-
+Overview
 This is a Rock Paper Scissors game built as a learning project to practice fundamental web development concepts. While it's a basic implementation, it covers essential programming principles that form the foundation of interactive web applications.
 
-How to Play
 
+How to Play
 Click on one of the three options: Rock, Paper, or Scissors
 
 The computer will randomly select its move
 
 The winner is determined by classic rules:
 
-Rock crushes Scissors
+ Rock crushes Scissors
 
-Paper covers Rock
+ Paper covers Rock
 
-Scissors cut Paper
+ Scissors cut Paper
 
 Scores are updated automatically
 
 The result is displayed with color-coded feedback:
 
-Green = You win!
+ Green = You win!
 
-Red = You lose
+ Red = You lose
 
-Black = Draw
+ Black = Draw
 
-Concepts I Learned
+
+
+ Concepts I Learned
+ 
 1. DOM Manipulation
 Selecting elements using querySelector and querySelectorAll
 
@@ -39,6 +43,8 @@ javascript
 const msg = document.querySelector("#msg");
 msg.innerText = "You Win!";
 msg.style.backgroundColor = "green";
+
+
 2. Event Listeners
 Attaching click events to multiple elements
 
@@ -53,6 +59,8 @@ choices.forEach((choice) => {
         play(userChoice);
     });
 });
+
+
 3. Functions & Scope
 Creating reusable functions for different game phases
 
@@ -65,6 +73,8 @@ const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
     return options[Math.floor(Math.random() * 3)];
 };
+
+
 4. Control Flow
 Conditional statements (if/else, else if)
 
@@ -74,6 +84,8 @@ Game logic implementation
 
 javascript
 userWin = compChoice === "paper" ? false : true;
+
+
 5. Data Types & Variables
 Working with strings, numbers, and booleans
 
@@ -83,6 +95,8 @@ Template literals for string interpolation
 
 javascript
 msg.innerText = `You Win! ${userChoice} beats ${compChoice}`;
+
+
 6. CSS Styling & Transitions
 Flexbox for layout
 
@@ -100,6 +114,8 @@ css
     background-color: black;
     transform: scale(1.05);
 }
+
+
 7. Random Number Generation
 Using Math.random() and Math.floor() for computer choices
 
@@ -107,13 +123,11 @@ Implementing AI opponent logic
 
 javascript
 const randIdx = Math.floor(Math.random() * 3);
+
+
 8. Game State Management
 Tracking scores with variables
 
 Updating UI based on game state
 
-Maintaining consistency between data and display
-
-
-
-
+Maintaining consistency between data and displa
