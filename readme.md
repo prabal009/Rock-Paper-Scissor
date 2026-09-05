@@ -53,13 +53,7 @@ If both the player and computer choose the same option, the round is a draw.
 
 ---
 
-## Technologies Used
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure of the game |
-| CSS3 | Styling, layout, hover effects, and transitions |
-| JavaScript | Game logic, DOM manipulation, events, and score management |
 
 ---
 
@@ -69,7 +63,7 @@ If both the player and computer choose the same option, the round is a draw.
 
 Selecting HTML elements and dynamically modifying their content and styles using JavaScript.
 
-```javascript
+
 const msg = document.querySelector("#msg");
 
 msg.innerText = "You Win!";
