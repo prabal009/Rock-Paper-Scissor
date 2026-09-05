@@ -1,58 +1,86 @@
-Rock Paper Scissors Game
-A classic hand game brought to life with HTML, CSS, and JavaScript
+# Rock Paper Scissors Game
 
-Overview
-This is a Rock Paper Scissors game built as a learning project to practice fundamental web development concepts. While it's a basic implementation, it covers essential programming principles that form the foundation of interactive web applications.
+A classic Rock Paper Scissors game built using HTML, CSS, and JavaScript.
 
+This project was created as a learning exercise to practice fundamental web development concepts, JavaScript logic, DOM manipulation, event handling, and interactive UI design.
 
-How to Play
-Click on one of the three options: Rock, Paper, or Scissors
+---
 
-The computer will randomly select its move
+## Overview
 
-The winner is determined by classic rules:
+This is a browser-based implementation of the classic Rock Paper Scissors game.
 
- Rock crushes Scissors
+The player selects Rock, Paper, or Scissors, while the computer randomly generates its move. The game compares both choices, determines the winner, updates the score, and displays the result dynamically.
 
- Paper covers Rock
+The main goal of this project was to understand how HTML, CSS, and JavaScript work together to create an interactive web application.
 
- Scissors cut Paper
+---
 
-Scores are updated automatically
+## Features
 
-The result is displayed with color-coded feedback:
+- Interactive Rock, Paper, and Scissors choices
+- Random computer-generated moves
+- Automatic winner determination
+- Real-time score tracking
+- Dynamic result messages
+- Win, lose, and draw feedback
+- Hover effects and smooth transitions
+- Circular game-choice buttons
+- Simple and clean user interface
+- Browser-based gameplay with no additional dependencies
 
- Green = You win!
+---
 
- Red = You lose
+## How to Play
 
- Black = Draw
+1. Open the game in a web browser.
+2. Select **Rock**, **Paper**, or **Scissors**.
+3. The computer randomly selects its move.
+4. The game compares both choices.
+5. The winner is determined using the classic rules.
+6. The score is updated automatically.
+7. The result is displayed on the screen.
 
+### Game Rules
 
+| Player Choice | Beats |
+|---------------|-------|
+| Rock | Scissors |
+| Paper | Rock |
+| Scissors | Rock |
 
- Concepts I Learned
- 
-1. DOM Manipulation
-Selecting elements using querySelector and querySelectorAll
+If both the player and computer choose the same option, the round is a draw.
 
-Accessing and modifying element properties like innerText, textContent, and style
+---
 
-Dynamically updating content without page refresh
+## Technologies Used
 
-javascript
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure of the game |
+| CSS3 | Styling, layout, hover effects, and transitions |
+| JavaScript | Game logic, DOM manipulation, events, and score management |
+
+---
+
+## Concepts Learned
+
+### 1. DOM Manipulation
+
+Selecting HTML elements and dynamically modifying their content and styles using JavaScript.
+
+```javascript
 const msg = document.querySelector("#msg");
+
 msg.innerText = "You Win!";
 msg.style.backgroundColor = "green";
 
+DOM manipulation allows the game interface to change dynamically without refreshing the page.
 
 2. Event Listeners
-Attaching click events to multiple elements
 
-Using forEach to iterate through NodeLists
+Handling user interactions by attaching click events to the Rock, Paper, and Scissors choices.
 
-Handling user interactions
-
-javascript
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
@@ -60,74 +88,89 @@ choices.forEach((choice) => {
     });
 });
 
+This allows the game to respond whenever the player clicks on a choice.
 
-3. Functions & Scope
-Creating reusable functions for different game phases
+3. Functions and Scope
 
-Understanding global vs local scope
+Creating reusable functions for different parts of the game and understanding parameters, return values, local scope, and global scope.
 
-Function parameters and return values
-
-javascript
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
+
     return options[Math.floor(Math.random() * 3)];
 };
-
-
 4. Control Flow
-Conditional statements (if/else, else if)
 
-Ternary operators for concise conditionals
+Using if, else if, else, and ternary operators to implement the game's decision-making logic.
 
-Game logic implementation
+if (userChoice === compChoice) {
+    drawGame();
+}
+else {
+    // Determine the winner
+}
 
-javascript
+A ternary operator can also be used for shorter conditional expressions:
+
 userWin = compChoice === "paper" ? false : true;
+5. Variables and Data Types
 
+The project uses different JavaScript data types and variable declarations.
 
-5. Data Types & Variables
-Working with strings, numbers, and booleans
+Some of the concepts practiced include:
 
-let and const for variable declaration
+Strings
+Numbers
+Booleans
+let
+const
+Template literals
 
-Template literals for string interpolation
+Example:
 
-javascript
+let userScore = 0;
+let compScore = 0;
+
+Template literals are used to dynamically create messages:
+
 msg.innerText = `You Win! ${userChoice} beats ${compChoice}`;
+6. CSS Styling and Transitions
 
+CSS was used to create the layout and improve the visual appearance of the game.
 
-6. CSS Styling & Transitions
-Flexbox for layout
+Important concepts practiced include:
 
-Hover effects for better UX
+Flexbox
+Hover effects
+Border radius
+CSS transitions
+Transformations
+Alignment
+Spacing
 
-Border-radius for circular elements
+Example:
 
-Smooth transitions for interactions
-
-css
 .choice {
     transition: 0.2s;
 }
+
 .choice:hover {
     background-color: black;
     transform: scale(1.05);
 }
-
-
 7. Random Number Generation
-Using Math.random() and Math.floor() for computer choices
 
-Implementing AI opponent logic
+The computer's choice is generated using Math.random() and Math.floor().
 
-javascript
 const randIdx = Math.floor(Math.random() * 3);
 
+The generated index is then used to select one of the available choices.
 
 8. Game State Management
-Tracking scores with variables
 
-Updating UI based on game state
+The game keeps track of the player's score and the computer's score using variables.
 
-Maintaining consistency between data and displa
+let userScore = 0;
+let compScore = 0;
+
+These values are updated after every round and displayed dynamically on the webpage.
